@@ -1,0 +1,13 @@
+AirportCode,AirportName,AirportTax,CityCode
+AP01,BarAirpot,135,CT01
+AP02,BorAirport,114,CT02
+AP03,CopAirport,144,CT03
+AP04,CesAirport,93,CT04
+AP05,GalAirport,107,CT05
+AP06,GerAirport,69,CT06
+AP07,IonAirport,45,CT07
+AP08,IriAirport,57,CT08
+AP09,RadAirport,47,CT09
+AP10,RhoAirport,72,CT10
+AP11,ThoAirport,53,CT11
+AP12,TitAirport,102,CT12
