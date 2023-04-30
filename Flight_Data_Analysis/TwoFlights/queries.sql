@@ -95,6 +95,17 @@ FROM (SELECT Distinct origin_airport from taf.twoflights) as t0
     Group by origin_airport) as t2 on t0.origin_airport = t2.origin_airport
 ORDER BY time_diff DESC;
 
+-- Amount of time each airplane spends on the ground
+WITH flight_times AS (
+  SELECT tail_number, arrival_time, departure_time,
+         LEAD(departure_time) OVER (PARTITION BY tail_number ORDER BY departure_time) AS next_departure_time
+  FROM flights
+)
+SELECT tail_number, AVG(next_departure_time - arrival_time) AS average_ground_time
+FROM flight_times
+WHERE next_departure_time IS NOT NULL
+GROUP BY tail_number;
+
 -- AA query
 SELECT tn.airline, tn.tail_number, airlinedelay, weatherdelay, nasdelay, securitydelay, lateaircraftdelay
 FROM 
