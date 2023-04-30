@@ -4,4 +4,4 @@ Documents for the construction of a game agent for SUTD's Artificial Intelligenc
 
 Game Agent was built through Reinforcement Learning, editing hyper-parameters to train the Mouse Agent to identify obstacles, avoid entities (such as the Cat), and reaching targets such as Switches and the Cheese.
 
-Final Agent that was submitted named, "Final_Submission.onnx", made use of the parameters 10, 10, 3, 5
+Final Agent that was submitted named, "Final_Submission.onnx", made use of the hyper parameters 10, 10, 3, 5, epoch 5 and learning rate 0.0005
