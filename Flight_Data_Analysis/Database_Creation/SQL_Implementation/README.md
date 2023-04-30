@@ -18,7 +18,7 @@
     xv. Payment: Payment.csv
     xvi. Status: Status.csv
   b. You need to create the tables in MySQL workbench using the logical data model specified in Appendix A before you import the data. Declare the fields using MySQL data types “varchar(xx)”, “int”, “float”, or “datetime” where appropriate. The size of the data structure is up to you e.g. CustomerID could be defined as varchar(30), FirstName as varchar(30), FlightPrice and TotalPrice as float, ArrivalDateTime and DepartureDateTime as datetime, TotalBusinessSeats and BookedEconomySeats as int, DestinationAirportCode as varchar(30), FlightNumber as varchar(30), etc. DO NOT CHANGE THE TABLE OR COLUMN NAME.
-  c. Import the data into the newly created tables. Where the name is a MySQL reserved word (e.g. names used to define table names or variables) such as “Exchange”, “Date” and “Status”, use a backtick “`” to capture the names e.g. `exchange`, `date`, or `status`.
+  c. Import the data into the newly created tables. Where the name is a MySQL reserved word (e.g. names used to define table names or variables) such as “Exchange”, “Date” and “Status”
   d. When you import the data from the csv files into MySQL Workbench, take note that there is a certain sequence by which the tables are to be created and imported because of the dependency due to foreign keys. Follow this sequence:
     i. Country
     ii. City
