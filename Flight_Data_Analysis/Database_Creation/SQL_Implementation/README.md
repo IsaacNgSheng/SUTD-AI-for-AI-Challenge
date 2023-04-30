@@ -44,3 +44,30 @@
     i. All mentions of flight prices will be in Begonia dollars.
     ii. Airport tax is stored in local currencies where the airport is located.
 2. Implement the queries listed in Appendix B directly in MySQL Workbench as MySQL scripts. Results tables for some of the queries are given.
+
+# Conceptual Data Model
+![image](https://user-images.githubusercontent.com/64978175/235363963-925d932f-359b-441f-ad8a-4b6c7623df46.png)
+
+# Logical Data Model
+![image](https://user-images.githubusercontent.com/64978175/235363969-c3c82dc8-fea5-4400-8d3f-131999331315.png)
+
+# Queries
+1. List all the customers whose mail addresses in Begonia. Display CustomerID, FirstName, and LastName. Sort results by CustomerID in ascending order.
+2. List all different flight numbers that have been booked in November and will departure in 2023 January. Display FlightNumber only.
+3. List average currency exchange rates from BegoniaDollar to other currencies, e.g. from Begonia Dollar to Carnation Dollar. Display average exchange rate(s) that is (are) greater than 1. Sort them by average exchange rate in ascending order. Display FromCurrency, ToCurrency, and average exchange rate as AverageExchangeRate.
+4. List number of available flights for all flight numbers between BorAirport (airport code is 'AP02') and RadAirport (airport code is 'AP09'). Display FlightNumber and number of flights as NumberOfFlights
+5. List number of flight numbers (FlightNumber) provided for each airline company. Display AirlineCode and number of flight numbers as NumberOfFlightNumbers.
+6. List airline companies containing “u” in their names. Show the number of flight numbers having business class and the number of flight numbers do not provide business class for each of them. Display AirlineName, BusinessClassIndicator, and number of flight numbers as NumberOfFlightNumbers.
+7. List top 3 booking offices which have highest number of bookings. You do not need to consider the status of booking; bookings with any status do count. Display OfficeID and number of bookings as NumberOfBookings.
+8. List 5 flight numbers which have lowest average percentage of total booked seats (including economy and business) among their available flights. Display FlightNumber only.
+9. For those booking status is “ST01”, calculate the average number of payments to settle those bookings. Display the average number of payments as AvgNumberOfPayments.
+10. Calculate the percentage of foreigners in the customer list. Foreigner is identified as people whose country in mail address is not the same as his/her nationality. Display the percentage as ForeignerPercent. Round the percentage up to 2 decimal places, e.g. 50.99%.
+11. List all Bookings placed between "2022-10-16" and "2022-11-15" which have not gotten any payments yet. "placed" refers to the booking that has been made; however, it does not mean this booking is confirmed.
+12. List all customers come from Begonia (Nationality is “Begonia”). Find their latest payment dates. Display CustomerID, FirstName, LastName, and latest payment date as LatestPayment.
+13. Sort customers by CustomerID in ascending order. Select the top five customers. List number of bookings, number of emails, number of phones for each of them. Display CustomerID, number of bookings as NumberOfBookings, number of Emails as NumberOfEmails, number of phones as NumberOfPhones.
+14. List top 5 flight numbers (FlightNumber) which have the most fluctuating flight price. Display FlightNumber, standard deviation of flight price as StdFlightPrice, average available business seats of all available flights for each flight number (including those not in the “booking” table) as AvgAvailableBusinessSeats, average available economy seats of all available flights for each flight number (including those not in the “booking” table) as AvgAvailableEconomySeats.
+15. Find customers who do not have email address but have phone number. List them who only has one phone number. Display CustomerID, full name (format as “FirstName LastName”, e.g. “Jean Smith”), and phone number (format as “CountryCode-AreaCode-LocalNumber”, e.g. “11-111-123456”). Sort them by CustomerID in ascending order.
+16. Among cities in each country, list city with the highest sum of TotalPrice. Exclude canceled bookings. Display CountryName, CityName and sum of total price as TotalSales. Sort records by CountryName in ascending order. Assume you do not know the StatusID for “canceled”.
+17. List top 5 canceled bookings which have the highest FlightPrice. Display BookingID, FlightNumber, ArrivalDateTime, DepartureDateTime, origin city code as OriginCityCode, destination city code as DestinationCityCode. Assuming you do not know the StatusID for “canceled” booking; you will have to JOIN tables to select canceled bookings
+18. If the exchange rate from RoseDollar to CarnationDollar change (exchange rate from CarnationDollar to RoseDollar will not change), how many different flight numbers (FlightNumber) will be affected based on current booking situation. Display number of flight numbers as NumberOfPotentialAffected.
+19. Rank airports based on total number of flights arrival and departure in weekdays. Display AirportCode and rank. (Airports with the same number of flights are treated as having the same rank.
