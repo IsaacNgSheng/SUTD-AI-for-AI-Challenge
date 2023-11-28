@@ -6,5 +6,5 @@ Powerpoint includes:
 3. Logistic Regression Model acting as a Supervised Classifier to identify characteristics and demographics of high probability individuals who may be terminated
 
 Data Source Used:
-recruitment_costs.csv
-staff_particulars.csv
+1.recruitment_costs.csv
+2. staff_particulars.csv
