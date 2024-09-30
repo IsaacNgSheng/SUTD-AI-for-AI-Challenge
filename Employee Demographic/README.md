@@ -37,8 +37,8 @@ This project focuses on analyzing employee demographics, recruitment costs, and 
 ## How to Use
 1. Data Analysis: Use the data_analysis.py script to run your own analysis or modify the existing models. Ensure you have the required dependencies (listed below).
 2. Data Sources: The analysis is performed on two main datasets:
-- recruitment_costs.csv: For recruitment cost analysis.
-- staff_particulars.csv: For demographic and performance data.
+  - recruitment_costs.csv: For recruitment cost analysis.
+  - staff_particulars.csv: For demographic and performance data.
 3. Visualization: View the detailed analysis and findings in the Data Analysis.pptx file or the Dashboard.pdf for quick insights.
 
 ## Requirements
